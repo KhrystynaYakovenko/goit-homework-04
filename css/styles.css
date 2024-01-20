@@ -104,6 +104,9 @@ img {
     display: flex;
     gap: 40px;
 }
+
+.header-item {
+}
 .menu-nav{
     display: block;
     color: #2E2F42;
@@ -118,7 +121,19 @@ img {
     color: #404BBF;
 }
 .menu-nav:focus{
-color: #404bbf
+    color: #404bbf
+}
+
+.menu-nav::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: transparent;
+}
+.menu-nav.studio-decoration::after{
+    background:  #404BBF;
 }
 
 .contacts-info{
@@ -147,6 +162,10 @@ color: #404bbf
 .main-page-tittle {
     background-color: #2E2F42;
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-page-tittle > .container{
@@ -186,6 +205,8 @@ color: #404bbf
 }
 .main-button:focus{
     background-color: #404BBF;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 /* #endregion Hero */
 /* #region Section 1 */
@@ -201,6 +222,22 @@ color: #404bbf
 
 .content-item {
     width: 264px;
+}
+
+.container-content-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background:  #F4F4FD;
+    margin-bottom: 8px;
+}
+
+.content-icon {
+
 }
 .content-header{
     color: #2E2F42;
@@ -244,7 +281,6 @@ color: #404bbf
 }
 .team-card{
     width: calc(100% - 24px * 3) / 4;
-    height: 380px;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -278,6 +314,23 @@ color: #404bbf
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+
+.container-team-card-social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.team-card-social-icon {
+    width: 40px;
+    height: 40px;
+    fill: #4D5AE5;
+}
+.team-card-social-icon:hover{
+    fill: #404BBF;
 }
 /* #endregion Section 2 */
 /* #region Section 3 */
@@ -345,6 +398,11 @@ color: #404bbf
     background-color: #2E2F42;
     padding: 100px 0;
 }
+
+.page-bottom > .container {
+    display: flex;
+    gap: 120px;
+}
 .logo-footer {
     display: inline-block;
     color: #4D5AE5;
@@ -368,5 +426,23 @@ color: #404bbf
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+.footer-social-media-text {
+    color:  #FFF;
+    font-weight: 500;
+    letter-spacing: 0.02;
+    margin-bottom: 16px;
+}
+.wrap-footer-icon {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 208px;
+}
+.footer-social-icon {
+    width: 40px;
+    height: 40px;
+
 }
 /* #endregion Footer */
